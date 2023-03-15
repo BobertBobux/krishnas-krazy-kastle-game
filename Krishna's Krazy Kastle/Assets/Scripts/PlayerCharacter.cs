@@ -12,7 +12,7 @@ public class PlayerCharacter : MonoBehaviour
     }
 
     // Update is called once per frame
-    [SerializeField] private float playerSpeed = 5f;
+    [SerializeField] private float playerSpeed = 3f;
     private Vector3 targetPosition;
     private float[] headingDirection = {0,0};
     private float direction;
@@ -22,9 +22,10 @@ public class PlayerCharacter : MonoBehaviour
     public Vector3 projectileTarget()
     {
         Vector3 projectileAim = new Vector3();
-        projectileAim = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        projectileAim = (Vector3.zero-transform.position)-(Vector3.zero-Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        
         projectileAim.z = 0f;
-        return projectileAim;
+        return projectileAim ;
     }
     void Update()
     {

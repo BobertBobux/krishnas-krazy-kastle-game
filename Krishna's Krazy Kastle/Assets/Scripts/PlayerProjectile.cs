@@ -20,8 +20,8 @@ public class PlayerProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, locationOfTarget, Time.deltaTime * 5);
-        Destroy(gameObject, 3);
+        transform.position = Vector3.MoveTowards(transform.position, (transform.position+locationOfTarget), Time.deltaTime * 10);
+        Destroy(gameObject, 1);
 
 
     }
