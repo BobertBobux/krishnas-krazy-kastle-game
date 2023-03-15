@@ -17,9 +17,23 @@ public class PlayerCharacter : MonoBehaviour
     private float[] headingDirection = {0,0};
     private float direction;
     private float oldDirection = 0;
-
+    public GameObject Projectile;
+    
+    public Vector3 projectileTarget()
+    {
+        Vector3 projectileAim = new Vector3();
+        projectileAim = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        projectileAim.z = 0f;
+        return projectileAim;
+    }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            
+            projectileTarget();
+            Instantiate(Projectile, transform.position, transform.rotation);
+        }
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

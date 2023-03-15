@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 712731485}
   - component: {fileID: 712731484}
   - component: {fileID: 712731483}
+  - component: {fileID: 712731486}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -154,6 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 5
+  Projectile: {fileID: 7660147453469788030, guid: 1b9a26161510c1945a24ed82eaa2d5a8, type: 3}
 --- !u!212 &712731484
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -221,6 +223,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &712731486
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712731482}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &733482738
 GameObject:
   m_ObjectHideFlags: 0
